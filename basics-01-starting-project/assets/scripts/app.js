@@ -30,7 +30,8 @@ function add() {
     alert("Eingabe ist keine Nummer");
     userInput.value = 0;
   } else createAndWriteOutput(initialResult, "+", enteredNumber);
-  clearResult();
+  writeToLog("ADD", initialResult, enteredNumber, currentResult);
+  clearInput();
 }
 
 function subtract() {
@@ -41,7 +42,8 @@ function subtract() {
     alert("Eingabe ist keine Nummer");
     userInput.value = 0;
   } else createAndWriteOutput(initialResult, "-", enteredNumber);
-  clearResult();
+  writeToLog("SUBTRACT", initialResult, enteredNumber, currentResult);
+  clearInput();
 }
 
 function multiply() {
@@ -52,7 +54,9 @@ function multiply() {
     alert("Eingabe ist keine Nummer");
     userInput.value = 0;
   } else createAndWriteOutput(initialResult, "*", enteredNumber);
-  clearResult();
+
+  writeToLog("MULTIPLY", initialResult, enteredNumber, currentResult);
+  clearInput();
 }
 
 function divide() {
@@ -63,10 +67,12 @@ function divide() {
     alert("Eingabe ist keine Nummer");
     userInput.value = 0;
   } else createAndWriteOutput(initialResult, "/", enteredNumber);
-  clearResult();
+
+  writeToLog("DIVIDE", initialResult, enteredNumber, currentResult);
+  clearInput();
 }
 
-function clearResult() {
+function clearInput() {
   userInput.value = "";
   console.log(userInput.value);
 }
