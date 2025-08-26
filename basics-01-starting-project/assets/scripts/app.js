@@ -82,3 +82,5 @@ subtractBtn.addEventListener("click", subtract);
 multiplyBtn.addEventListener("click", multiply);
 divideBtn.addEventListener("click", divide);
 clearBtn.addEventListener("click", clearInput);
+
+console.log();
